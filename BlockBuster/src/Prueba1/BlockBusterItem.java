@@ -19,5 +19,7 @@ public abstract class BlockBusterItem {
         return "Nombre: "+nombre+", Código: "+codigo+", Precio de renta: Lps. "+precioRenta;
     }
     public abstract double pagoRenta(int dias); 
+
+    
     
 }
