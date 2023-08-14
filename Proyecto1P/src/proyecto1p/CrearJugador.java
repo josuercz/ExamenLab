@@ -6,6 +6,7 @@ import javax.swing.JOptionPane;
 public class CrearJugador extends javax.swing.JFrame {
     //hacer loggs
     ArrayList<Loggs> ArrayLoggs;
+    
     ArrayList<Usuario> ArrayUsuarios;
     boolean mododejuego_Tutorial=true;
     
