@@ -9,18 +9,18 @@ import javax.swing.JOptionPane;
 public class MenuPrincipal extends javax.swing.JFrame {
     ArrayList<Loggs> ArrayLoggs;
     ArrayList<Usuario> ArrayUsuarios;
-    String nombreusuario;
+    String nombreUsuario;
     boolean mododejuego_Tutorial=true;
     
     
     public MenuPrincipal(ArrayList<Usuario> AtributUsuarios,ArrayList<Loggs> AtributLoggs, String nombreUsuario,boolean mododejuego) {
        ArrayLoggs=AtributLoggs;
-        this.nombreusuario = nombreusuario;
-        ArrayUsuarios = AtributUsuarios;
-      mododejuego_Tutorial=mododejuego;
+       this.nombreUsuario = nombreUsuario;
+       ArrayUsuarios = AtributUsuarios;
+       mododejuego_Tutorial=mododejuego;
         
-        initComponents();
-        setLocationRelativeTo(null);
+       initComponents();
+       setLocationRelativeTo(null);
     }
 
     /**
@@ -119,7 +119,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         tableroLogic.configurarTamanoBotones(new Dimension(100, 100));
         
         //ArrayUsuarios,this.ArrayLoggs,nombreusuario,mododejuego_Tutorial
-        TableroBoton tab = new TableroBoton(tableroLogic);
+        TableroBoton tab = new TableroBoton(tableroLogic,ArrayUsuarios,this.ArrayLoggs,nombreUsuario,mododejuego_Tutorial);
         tab.setVisible(true);
         this.dispose();
         } 

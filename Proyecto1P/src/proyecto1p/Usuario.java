@@ -3,8 +3,8 @@ package proyecto1p;
 
 public class Usuario {
     //atributos
-    private String username;
-    private String password;
+    String username;
+    String password;
     int puntos=0,partidajugador1=0,partidajugador2=0; 
     //partidaVillanos = partidajugador1
     //partidaheroes = partidajugador2
