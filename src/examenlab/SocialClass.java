@@ -13,9 +13,9 @@ import java.util.List;
  */
 public abstract  class SocialClass {
 
-    private List<String> friends;
-    private List<String> posts;
-    private String username;
+    protected List<String> friends;
+    protected List<String> posts;
+    protected String username;
 
     public SocialClass(String username) {
         this.friends = new ArrayList<>();
