@@ -31,7 +31,7 @@ public class UberSocial {
         if (tipo.equals("FACEBOOK")) {
             account = new Facebook(username) {};
         } else if (tipo.equals("TWITTER")) {
-            //account = new Twitter(username);
+            account = new Twitter(username) {};
         }
         
         if (account != null) {
