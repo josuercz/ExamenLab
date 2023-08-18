@@ -2,6 +2,7 @@
 package examenlab;
 //Nicole
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public final class Comment {
@@ -16,8 +17,10 @@ public final class Comment {
         fecha=Calendar.getInstance();
     }
     
-    public String print(){
-        return autor+"-"+fecha+"\nComentario: "+comentario;
+    public void print(){
+         SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String Fecha = date.format(fecha.getTime());
+        System.out.println(autor+"-"+Fecha+"\nComentario: "+comentario);
     }
     
     
