@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author Ana Reyes
  */
-public class SocialClass {
+public abstract  class SocialClass {
 
     private List<String> friends;
     private List<String> posts;
