@@ -112,7 +112,7 @@ public class CrearUser extends javax.swing.JFrame {
             this.dispose();
             
         }else{
-            JOptionPane.showMessageDialog(null, "Ya existe este usuario","Cuidado",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Ya existe este usuario");
         }
         
     }//GEN-LAST:event_aceptarActionPerformed
