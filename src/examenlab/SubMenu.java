@@ -13,9 +13,12 @@ public class SubMenu extends javax.swing.JFrame {
     /**
      * Creates new form SubMenu
      */
-    public SubMenu() {
+    
+    TipoRedSocial2 type;
+    public SubMenu(TipoRedSocial2 type) {
         initComponents();
          setLocationRelativeTo(null);
+         this.type = type;
     }
 
     /**
@@ -218,7 +221,7 @@ public class SubMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_logOutActionPerformed
 
     private void logOutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logOutMouseClicked
-       Login login=new Login();
+       Login login=new Login(type);
        login.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_logOutMouseClicked
@@ -269,7 +272,7 @@ public class SubMenu extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SubMenu().setVisible(true);
+                new SubMenu(null).setVisible(true);
             }
         });
     }

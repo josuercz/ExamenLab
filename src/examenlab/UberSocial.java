@@ -15,9 +15,9 @@ public class UberSocial {
     TipoRedSocial2 type;
     
     
-    public UberSocial() {
+    public UberSocial(TipoRedSocial2 type) {
         Cuentas = new ArrayList<>();
-        type=new TipoRedSocial2();
+        this.type=type;
     }
     
     public SocialClass buscar(String username) {
@@ -30,10 +30,9 @@ public class UberSocial {
     }
     public void agregarCuenta(String username, String tipo) {
         SocialClass account = null;
-        
         if (type.tipoRed.equals("FACEBOOK")) {
             account = new Facebook(username) {};
-        } else if (tipo.equals("TWITTER")) {
+        } else if (type.tipoRed.equals("TWITTER")) {
             account = new Twitter(username) {};
         }
         

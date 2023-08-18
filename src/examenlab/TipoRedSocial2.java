@@ -134,7 +134,7 @@ public class TipoRedSocial2 extends javax.swing.JFrame {
 
     private void facebookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_facebookActionPerformed
         tipoRed="FACEBOOK";
-        Login login=new Login();
+        Login login=new Login(this);
         login.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_facebookActionPerformed
@@ -150,7 +150,7 @@ public class TipoRedSocial2 extends javax.swing.JFrame {
 
     private void twitterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twitterActionPerformed
         tipoRed="TWITTER";
-        Login login=new Login();
+        Login login=new Login(this);
         login.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_twitterActionPerformed

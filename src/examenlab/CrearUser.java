@@ -8,11 +8,11 @@ import javax.swing.JOptionPane;
 
 public class CrearUser extends javax.swing.JFrame {
     UberSocial uber;
-    TipoRedSocial2 tipo;
-    public CrearUser() {
+    TipoRedSocial2 type;
+    public CrearUser(TipoRedSocial2 type) {
         initComponents();
-        uber=new UberSocial();
-        tipo=new TipoRedSocial2();
+        uber=new UberSocial(type);
+        this.type=type;
         setLocationRelativeTo(null);
     }
 
@@ -107,9 +107,12 @@ public class CrearUser extends javax.swing.JFrame {
         if((uber.buscar(user)==null)){
             uber.agregarCuenta(user, t);
             JOptionPane.showMessageDialog(null, "Registrado");
+            SubMenu subMenu=new SubMenu(type);
+            subMenu.setVisible(true);
+            this.dispose();
             
         }else{
-            JOptionPane.showMessageDialog(null, "No hay usuarios registrados","Cuidado",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Ya existe este usuario","Cuidado",JOptionPane.ERROR_MESSAGE);
         }
         
     }//GEN-LAST:event_aceptarActionPerformed
@@ -144,7 +147,7 @@ public class CrearUser extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CrearUser().setVisible(true);
+                new CrearUser(null).setVisible(true);
             }
         });
     }

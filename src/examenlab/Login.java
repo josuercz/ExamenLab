@@ -6,10 +6,12 @@ import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
     UberSocial uber;
+    TipoRedSocial2 type;
     
-    public Login() {
+    public Login(TipoRedSocial2 type) {
         initComponents();
-        uber=new UberSocial();
+        uber=new UberSocial(type);
+        this.type = type;
         setLocationRelativeTo(null);
     }
     
@@ -141,14 +143,14 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void salirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMouseClicked
-        TipoRedSocial claseRed=new TipoRedSocial();
+        TipoRedSocial2 claseRed=new TipoRedSocial2();
         claseRed.setVisible(true);
         this.dispose();
         
     }//GEN-LAST:event_salirMouseClicked
 
     private void agregarUsuario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarUsuario1ActionPerformed
-        CrearUser crearUser=new CrearUser();
+        CrearUser crearUser=new CrearUser(type);
         crearUser.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_agregarUsuario1ActionPerformed
@@ -163,7 +165,7 @@ public class Login extends javax.swing.JFrame {
         String usuario=Username.getText();
         if((uber.buscar(usuario)!=null)){
             JOptionPane.showMessageDialog(null, "Logged in");
-            SubMenu subMenu=new SubMenu();
+            SubMenu subMenu=new SubMenu(type);
             subMenu.setVisible(true);
             this.dispose();
         }else{
@@ -204,7 +206,7 @@ public class Login extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Login().setVisible(true);
+                new Login(null).setVisible(true);
             }
         });
     }
