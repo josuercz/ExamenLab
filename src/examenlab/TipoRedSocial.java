@@ -23,7 +23,7 @@ public class TipoRedSocial extends javax.swing.JPanel {
         facebook = new javax.swing.JButton();
         twitter = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        aceptar = new javax.swing.JButton();
+        salir = new javax.swing.JButton();
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -44,9 +44,19 @@ public class TipoRedSocial extends javax.swing.JPanel {
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("*Elija una de las redes sociales*");
 
-        aceptar.setBackground(new java.awt.Color(1, 68, 101));
-        aceptar.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        aceptar.setText("ACEPTAR");
+        salir.setBackground(new java.awt.Color(1, 68, 101));
+        salir.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        salir.setText("SALIR");
+        salir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                salirMouseClicked(evt);
+            }
+        });
+        salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -68,7 +78,7 @@ public class TipoRedSocial extends javax.swing.JPanel {
                         .addComponent(jLabel2))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(166, 166, 166)
-                        .addComponent(aceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(salir, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(71, Short.MAX_VALUE))
         );
 
@@ -86,7 +96,7 @@ public class TipoRedSocial extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(aceptar)
+                .addComponent(salir)
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -104,13 +114,22 @@ public class TipoRedSocial extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void salirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMouseClicked
+        
+        
+    }//GEN-LAST:event_salirMouseClicked
+
+    private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
+    System.exit(0);
+    }//GEN-LAST:event_salirActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton aceptar;
     private javax.swing.JButton facebook;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton salir;
     private javax.swing.JButton twitter;
     // End of variables declaration//GEN-END:variables
 }

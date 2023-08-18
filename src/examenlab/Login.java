@@ -19,8 +19,9 @@ public class Login extends javax.swing.JFrame {
         Username = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        agregarUsuario = new javax.swing.JButton();
+        salir = new javax.swing.JButton();
         aceptar = new javax.swing.JButton();
+        agregarUsuario1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -37,26 +38,30 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("LOGIN");
 
-        agregarUsuario.setBackground(new java.awt.Color(153, 153, 153));
-        agregarUsuario.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        agregarUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        agregarUsuario.setText("AGREGAR USER");
+        salir.setBackground(new java.awt.Color(153, 153, 153));
+        salir.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        salir.setForeground(new java.awt.Color(255, 255, 255));
+        salir.setText("SALIR");
+        salir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                salirMouseClicked(evt);
+            }
+        });
 
         aceptar.setBackground(new java.awt.Color(153, 153, 153));
         aceptar.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         aceptar.setForeground(new java.awt.Color(255, 255, 255));
         aceptar.setText("ACEPTAR");
 
+        agregarUsuario1.setBackground(new java.awt.Color(153, 153, 153));
+        agregarUsuario1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        agregarUsuario1.setForeground(new java.awt.Color(255, 255, 255));
+        agregarUsuario1.setText("AGREGAR USER");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(134, Short.MAX_VALUE)
-                .addComponent(aceptar)
-                .addGap(123, 123, 123)
-                .addComponent(agregarUsuario)
-                .addGap(139, 139, 139))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -68,9 +73,20 @@ public class Login extends javax.swing.JFrame {
                         .addGap(245, 245, 245)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(134, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(aceptar)
+                        .addGap(136, 136, 136)
+                        .addComponent(agregarUsuario1)
+                        .addGap(126, 126, 126))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(salir)
+                        .addGap(264, 264, 264))))
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {aceptar, agregarUsuario});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {aceptar, agregarUsuario1, salir});
 
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -84,11 +100,13 @@ public class Login extends javax.swing.JFrame {
                 .addGap(63, 63, 63)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(aceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(agregarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(137, Short.MAX_VALUE))
+                    .addComponent(agregarUsuario1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(salir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {aceptar, agregarUsuario});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {aceptar, agregarUsuario1, salir});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -103,6 +121,13 @@ public class Login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void salirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMouseClicked
+        TipoRedSocial claseRed=new TipoRedSocial();
+        claseRed.setVisible(true);
+        this.dispose();
+        
+    }//GEN-LAST:event_salirMouseClicked
 
     
     /**
@@ -144,9 +169,10 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Username;
     private javax.swing.JButton aceptar;
-    private javax.swing.JButton agregarUsuario;
+    private javax.swing.JButton agregarUsuario1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton salir;
     // End of variables declaration//GEN-END:variables
 }

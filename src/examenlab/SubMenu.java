@@ -36,7 +36,7 @@ public class SubMenu extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
-        regresar = new javax.swing.JButton();
+        logOut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -123,9 +123,19 @@ public class SubMenu extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Perfil", jPanel5);
 
-        regresar.setBackground(new java.awt.Color(0, 102, 153));
-        regresar.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
-        regresar.setText("Regresar");
+        logOut.setBackground(new java.awt.Color(0, 102, 153));
+        logOut.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        logOut.setText("Cerrar Sesión");
+        logOut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logOutMouseClicked(evt);
+            }
+        });
+        logOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logOutActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -138,13 +148,13 @@ public class SubMenu extends javax.swing.JFrame {
                     .addComponent(comentar)
                     .addComponent(agregarAmigo)
                     .addComponent(publicar, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(regresar))
+                    .addComponent(logOut))
                 .addGap(29, 29, 29)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {agregarAmigo, comentar, perfil, publicar, regresar});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {agregarAmigo, comentar, logOut, perfil, publicar});
 
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -162,11 +172,11 @@ public class SubMenu extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(perfil)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(regresar)
+                .addComponent(logOut)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {agregarAmigo, comentar, perfil, publicar, regresar});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {agregarAmigo, comentar, logOut, perfil, publicar});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -181,6 +191,16 @@ public class SubMenu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void logOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logOutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_logOutActionPerformed
+
+    private void logOutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logOutMouseClicked
+       Login login=new Login();
+       login.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_logOutMouseClicked
 
     /**
      * @param args the command line arguments
@@ -226,8 +246,8 @@ public class SubMenu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JButton logOut;
     private javax.swing.JButton perfil;
     private javax.swing.JButton publicar;
-    private javax.swing.JButton regresar;
     // End of variables declaration//GEN-END:variables
 }
