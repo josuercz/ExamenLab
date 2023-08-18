@@ -15,6 +15,7 @@ public class SubMenu extends javax.swing.JFrame {
      */
     public SubMenu() {
         initComponents();
+         setLocationRelativeTo(null);
     }
 
     /**
@@ -45,18 +46,38 @@ public class SubMenu extends javax.swing.JFrame {
         publicar.setBackground(new java.awt.Color(0, 102, 153));
         publicar.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         publicar.setText("Publicar");
+        publicar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                publicarActionPerformed(evt);
+            }
+        });
 
         agregarAmigo.setBackground(new java.awt.Color(0, 102, 153));
         agregarAmigo.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         agregarAmigo.setText("Agregar amigo");
+        agregarAmigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agregarAmigoActionPerformed(evt);
+            }
+        });
 
         comentar.setBackground(new java.awt.Color(0, 102, 153));
         comentar.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         comentar.setText("Comentar");
+        comentar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comentarActionPerformed(evt);
+            }
+        });
 
         perfil.setBackground(new java.awt.Color(0, 102, 153));
         perfil.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         perfil.setText("Perfil");
+        perfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                perfilActionPerformed(evt);
+            }
+        });
 
         jTabbedPane1.setBackground(new java.awt.Color(204, 204, 204));
         jTabbedPane1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, null, new java.awt.Color(102, 102, 102)));
@@ -201,6 +222,22 @@ public class SubMenu extends javax.swing.JFrame {
        login.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_logOutMouseClicked
+
+    private void publicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_publicarActionPerformed
+        jTabbedPane1.setSelectedIndex(0);
+    }//GEN-LAST:event_publicarActionPerformed
+
+    private void agregarAmigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarAmigoActionPerformed
+        jTabbedPane1.setSelectedIndex(1);
+    }//GEN-LAST:event_agregarAmigoActionPerformed
+
+    private void comentarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comentarActionPerformed
+       jTabbedPane1.setSelectedIndex(2);
+    }//GEN-LAST:event_comentarActionPerformed
+
+    private void perfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perfilActionPerformed
+    jTabbedPane1.setSelectedIndex(3); 
+    }//GEN-LAST:event_perfilActionPerformed
 
     /**
      * @param args the command line arguments

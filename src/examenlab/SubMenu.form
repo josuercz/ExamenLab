@@ -92,6 +92,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Publicar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="publicarActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="agregarAmigo">
           <Properties>
@@ -103,6 +106,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Agregar amigo"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="agregarAmigoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="comentar">
           <Properties>
@@ -114,6 +120,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Comentar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comentarActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="perfil">
           <Properties>
@@ -125,6 +134,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Perfil"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="perfilActionPerformed"/>
+          </Events>
         </Component>
         <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
           <Properties>

@@ -12,9 +12,12 @@ import java.util.ArrayList;
  */
 public class UberSocial {
     ArrayList <SocialClass> Cuentas;
+    TipoRedSocial2 type;
+    
     
     public UberSocial() {
         Cuentas = new ArrayList<>();
+        type=new TipoRedSocial2();
     }
     
     public SocialClass buscar(String username) {
@@ -25,10 +28,10 @@ public class UberSocial {
         }
         return null;
     }
-    
     public void agregarCuenta(String username, String tipo) {
         SocialClass account = null;
-        if (tipo.equals("FACEBOOK")) {
+        
+        if (type.tipoRed.equals("FACEBOOK")) {
             account = new Facebook(username) {};
         } else if (tipo.equals("TWITTER")) {
             account = new Twitter(username) {};
